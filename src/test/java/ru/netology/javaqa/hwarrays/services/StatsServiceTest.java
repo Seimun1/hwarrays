@@ -6,9 +6,9 @@ public class StatsServiceTest {
     @Test
     public void shouldFindMinSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMonth = 9;
-        int actualMonth = service.minSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedMonth = 9;
+        long actualMonth = service.minSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedMonth, actualMonth);
@@ -17,9 +17,9 @@ public class StatsServiceTest {
     @Test
     public void shouldFindMaxSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMonth = 8;
-        int actualMonth = service.maxSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedMonth = 8;
+        long actualMonth = service.maxSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedMonth, actualMonth);
@@ -28,9 +28,9 @@ public class StatsServiceTest {
     @Test
     public void shouldFindSumSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedSum = 180;
-        int actualSum = service.sumSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedSum = 180;
+        long actualSum = service.sumSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedSum, actualSum);
@@ -39,9 +39,9 @@ public class StatsServiceTest {
     @Test
     public void shouldAverageSalesInMonth() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedSum = 15;
-        int actualSum = service.averageSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedSum = 15;
+        long actualSum = service.averageSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedSum, actualSum);
@@ -50,9 +50,9 @@ public class StatsServiceTest {
     @Test
     public void shouldAmountMonthMinAverageSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedAmountMonth = 5;
-        int actualAmountMonth = service.averageSalesMin(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedAmountMonth = 5;
+        long actualAmountMonth = service.averageSalesMin(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedAmountMonth, actualAmountMonth);
@@ -61,9 +61,9 @@ public class StatsServiceTest {
     @Test
     public void shouldAmountMonthMaxAverageSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedAmountMonth = 5;
-        int actualAmountMonth = service.averageSalesMax(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedAmountMonth = 5;
+        long actualAmountMonth = service.averageSalesMax(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedAmountMonth, actualAmountMonth);
