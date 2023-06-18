@@ -7,8 +7,8 @@ public class StatsServiceTest {
     public void shouldFindMinSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedMonth = 9;
-        long actualMonth = service.minSales(sales);
+        int expectedMonth = 9;
+        int actualMonth = service.minSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedMonth, actualMonth);
@@ -18,8 +18,8 @@ public class StatsServiceTest {
     public void shouldFindMaxSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedMonth = 8;
-        long actualMonth = service.maxSales(sales);
+        int expectedMonth = 8;
+        int actualMonth = service.maxSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedMonth, actualMonth);
@@ -51,8 +51,8 @@ public class StatsServiceTest {
     public void shouldAmountMonthMinAverageSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedAmountMonth = 5;
-        long actualAmountMonth = service.averageSalesMin(sales);
+        int expectedAmountMonth = 5;
+        int actualAmountMonth = service.averageSalesMin(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedAmountMonth, actualAmountMonth);
@@ -62,8 +62,8 @@ public class StatsServiceTest {
     public void shouldAmountMonthMaxAverageSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedAmountMonth = 5;
-        long actualAmountMonth = service.averageSalesMax(sales);
+        int expectedAmountMonth = 5;
+        int actualAmountMonth = service.averageSalesMax(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expectedAmountMonth, actualAmountMonth);
