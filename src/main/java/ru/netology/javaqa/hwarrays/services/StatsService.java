@@ -24,25 +24,22 @@ public class StatsService {
     public long sumSales(long[] sales) { // Сумма всех продаж
         long sum = 0;
         for (long t : sales) { // цикл для обхода каждого элемента массива
-            sum = sum + t; //суммирование каждого элемента массива
+            sum+=t; //sum = sum + t; суммирование каждого элемента массива
         }
         return sum;
     }
 
     public long averageSales(long[] sales) { // Средняя сумма продаж в месяц
-        long sum = 0;
-        long average = 0;
-        for (long t : sales) { // цикл для обхода каждого элемента массива
-            sum = sum + t;
-            average = sum / 12;
-        }
-        return average;
+        return sumSales(sales) / sales.length;
+        // long average = sumSales(sales) / sales.length;
+        // return average;
     }
 
     public int averageSalesMin(long[] sales) { // Количество месяцев с продажами ниже среднего (меньше 15)
         int count = 0;
+        long averageSale = averageSales(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < 15) {
+            if (sales[i] < averageSale) {
                 count++;
             }
         }
@@ -51,8 +48,9 @@ public class StatsService {
 
     public int averageSalesMax(long[] sales) { // Количество месяцев с продажами выше среднего (меньше 15)
         int count = 0;
+        long averageSale = averageSales(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > 15) {
+            if (sales[i] > averageSale) {
                 count++;
             }
         }
