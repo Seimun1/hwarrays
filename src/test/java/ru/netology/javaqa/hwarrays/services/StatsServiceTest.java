@@ -69,4 +69,3 @@ public class StatsServiceTest {
         Assertions.assertEquals(expectedAmountMonth, actualAmountMonth);
     }
 }
-
